@@ -1,0 +1,67 @@
+import random
+print('Welcome to the "Scissors , Paper , Rock" game \n')
+a=input("Press enter to continue or type (Help) for the rules \n").capitalize()
+if a=="Help":
+    print("""********** RULES **********
+1) You choose and the computer chooses
+2) Rock smashes Scissors -> Rock wins
+3) Scissors cut Paper -> Scissors win
+4) Paper covers Rock -> Paper wins
+""")
+lis=["Scissors","Paper","Rock"]
+b=random.choice(lis)
+c=input("enter your choice : paper , rock , scissors :\n").capitalize()
+rock_art="""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+scissors_art="""    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+paper_art="""     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+if c=="Paper":
+    print(f"""you choosen paper...
+          {paper_art}""")
+elif c=="Rock":
+    print(f"""you choosen rock..
+          {rock_art}""") 
+elif c=="Scissors":
+    print(f"""you choosen scissors...
+          {scissors_art}""")
+else :
+    print("sorry! this option is not valide!")
+
+if b=="Paper":
+    print(f"""the computer choosen paper...
+          {paper_art}""")
+elif b=="Rock":
+    print(f"""the computer choosen rock..
+          {rock_art}""") 
+elif b=="Scissors":
+    print(f"""the computer choosen scissors...
+          {scissors_art}""")
+
+
+if b==c :
+    print ("draw!")
+elif (b=="Rock" and c=="Paper") or (b=="Paper" and c=="Scissors") or (b=="Scissors" and c=="Rock"):
+    print ("you win!")
+elif (b=="Paper" and c=="Rock" ) or (b=="Scissors" and c=="Paper")or (c=="Scissors" and b=="Rock"):
+    print("the computer wins")
+else :
+    print("sorry! this option isnt valide!")
+

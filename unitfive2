@@ -1,0 +1,10 @@
+basket=[["apple","banana"],["milk","water"]]
+print(basket)
+input("this is your basket rn")
+basket.append([1,2,3])
+basket[0].insert(0,"orange")
+basket[0].append("kiwi")
+basket[1].remove ("water")
+basket[1].insert(0,"coffee")
+basket[1].insert(2,"tea")
+print(f"{basket}is your updated basket")
