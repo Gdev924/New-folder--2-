@@ -48,21 +48,16 @@ display=["_"for y in random_word]
 tries=6
 allthelets=[]
 while "_" in display and tries>0:
-    guess = input("pls guess a letter\n").lower()
-    
+    guess = input("pls guess a letter\n").lower()    
     if guess in allthelets:
         print("you already guessed this ,try again..")
         continue
     allthelets.append(guess)
     for x in range(len(random_word)):
         if guess == random_word[x]:
-            display[x] = guess
-            
+            display[x] = guess           
     if guess not in random_word:
         tries-=1
-        print("try again")
-        
-    
     print(" ".join(display))
     print(f"you have {tries} tries left ")
     if tries<6 :
@@ -73,4 +68,3 @@ if tries == 0:
 """)
 else :
     print(f"                     YOU WON ! the word was *{random_word}*")
-
