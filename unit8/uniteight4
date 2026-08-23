@@ -1,0 +1,18 @@
+import string 
+alpha = string.ascii_lowercase
+beta = string.ascii_uppercase
+mes = input("Please enter a message : \n")
+key = int(input("Please enter a shift number\n"))
+encrypted_word = ""
+def fun(alphabet, letter): 
+    original_position = alphabet.index(letter)
+    new_position = (original_position + key) % 26
+    return alphabet[new_position]
+for letter in mes:
+    if letter in alpha:
+        encrypted_word += fun(alphabet=alpha, letter=letter)
+    elif letter in beta:
+        encrypted_word += fun(alphabet=beta, letter=letter)
+    else:
+        encrypted_word += letter
+print(f"here is the encrypted word :\n{encrypted_word}")
