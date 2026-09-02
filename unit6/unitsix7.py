@@ -2,13 +2,12 @@ import random
 import string
 print("\nwelcom to the password generator, \n")
 a=input("please enter how many characters do you want in the password ")
-b=input("how many letters ?\n")
-c=input("how many numbers ?\n")
-d=input("how many symbols ?\n")
+b=int(input("how many letters ?\n"))
+c=int(input("how many numbers ?\n"))
+d=int(input("how many symbols ?\n"))
 if int(b)+int(c)+int(d) != int(a):
     print("invalid input , the sum of the letters , the numbers and the symbols dont match the number of the characters you want \n")
-elif type(a)!=int or type(b)!=int or type(c)!=int or type (d)!=int:
-    print("please input digits only")
+
 else:
     the_ran_let=random.choices(string.ascii_letters,k=int(b))
     the_ran_dig=random.choices(string.digits, k=int(c))

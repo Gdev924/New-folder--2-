@@ -33,35 +33,32 @@ paper_art="""     _______
          _______)
 ---.__________)
 """
-if c=="Paper":
-    print(f"""you choosen paper...
+if c=="Paper" or c=="Rock" or c=="Scissors":
+    if c=="Paper":
+        print(f"""you choosen paper...
           {paper_art}""")
-elif c=="Rock":
-    print(f"""you choosen rock..
+    elif c=="Rock":
+        print(f"""you choosen rock..
           {rock_art}""") 
-elif c=="Scissors":
-    print(f"""you choosen scissors...
-          {scissors_art}""")
-else :
-    print("sorry! this option is not valide!")
-
-if b=="Paper":
-    print(f"""the computer choosen paper...
-          {paper_art}""")
-elif b=="Rock":
-    print(f"""the computer choosen rock..
-          {rock_art}""") 
-elif b=="Scissors":
-    print(f"""the computer choosen scissors...
+    elif c=="Scissors":
+        print(f"""you choosen scissors...
           {scissors_art}""")
 
+    if b=="Paper":
+        print(f"""the computer choosen paper...
+          {paper_art}""")
+    elif b=="Rock":
+        print(f"""the computer choosen rock..
+          {rock_art}""") 
+    elif b=="Scissors":
+        print(f"""the computer choosen scissors...
+          {scissors_art}""")
 
-if b==c :
-    print ("draw!")
-elif (b=="Rock" and c=="Paper") or (b=="Paper" and c=="Scissors") or (b=="Scissors" and c=="Rock"):
-    print ("you win!")
-elif (b=="Paper" and c=="Rock" ) or (b=="Scissors" and c=="Paper")or (c=="Scissors" and b=="Rock"):
-    print("the computer wins")
-else :
-    print("sorry! this option isnt valide!")
-
+    if b==c :
+        print ("tie!")
+    elif (b=="Rock" and c=="Paper") or (b=="Paper" and c=="Scissors") or (b=="Scissors" and c=="Rock"):
+        print ("you win!")
+    elif (b=="Paper" and c=="Rock" ) or (b=="Scissors" and c=="Paper")or (c=="Scissors" and b=="Rock"):
+        print("the computer wins")
+else:
+    print("sorry! this option is not valid!")

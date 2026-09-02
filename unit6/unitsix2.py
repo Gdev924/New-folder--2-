@@ -3,4 +3,4 @@ x=int(input("enter a number \n"))
 print (f"the multipication table of {x} is :\n")
 for y in range(1,11):
     z=y*x
-    print(f"{y} * {x}={z}")
+    print(f"{y} x {x}={z}")

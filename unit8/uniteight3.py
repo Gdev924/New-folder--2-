@@ -7,7 +7,7 @@ encrypted_word=""
 for letter in mes:
     if letter in alpha:
         original_position=alpha.index(letter)
-        new_position=(original_position+key)% 26
+        new_position=(original_position-key)% 26
         encrypted_word +=alpha[new_position]
     elif letter in beta:
         original_position=beta.index(letter)
