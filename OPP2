@@ -1,0 +1,28 @@
+class Movie:
+    def __init__(self,title,dirictor,release_year,genre):
+        self.title=title
+        self.dirictor=dirictor
+        self.release_year=release_year
+        self.genre=genre
+    def display_movie(self):
+        print(f"Title {self.title}")
+        print(f"Dirictor: {self.dirictor}")
+        print(f"Release Year: {self.release_year}")
+        print(f"Genre: {self.genre}")
+    def change_dir(self,new_dirictor):
+        self.dirictor = new_dirictor
+
+movie1=Movie("Godfather","Francise Ford Coppola","1972","Crime")
+movie2=Movie("The Parasite","Bong Joon-ho","2019","Thriller")
+movie3=Movie("Inception","Christopher Nolan","2010","Sci-Fi")
+print("                   ___MOVIES LIST___                     ")
+movie1.display_movie()
+movie2.display_movie()
+movie3.display_movie()
+print("                  changing dirictors...                  ")
+movie1.change_dir("Jackie Chan")
+movie1.display_movie()
+movie2.change_dir("Ludovico Einaudi")
+movie2.display_movie()
+movie3.change_dir("Leonardo Di Caperio")
+movie3.display_movie()

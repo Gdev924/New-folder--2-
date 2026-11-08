@@ -1,0 +1,14 @@
+class Task:
+    def __init__(self,title,description,deadline,status="complete"):
+        self.title=title
+        self.description=description
+        self.deadline=deadline
+        self.status=status
+    def display_task(self):
+        print(f"Title: {self.title}")
+        print(f"Description: {self.description}")
+        print(f"Deadline: {self.deadline}")
+        print(f"Status: {self.status}")
+    def mark_as_complete(self):
+        self.status="Complete"
+
